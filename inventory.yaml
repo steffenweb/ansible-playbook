@@ -1,0 +1,7 @@
+[VMLIST]
+1.2.3.4 #vm1
+4.3.2.1 #vm2
+
+[proxmoxcontainer:vars]
+ansible_user=root
+ansible_python_interpreter="/usr/bin/python3"

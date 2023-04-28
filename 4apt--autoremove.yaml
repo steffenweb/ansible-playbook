@@ -1,0 +1,10 @@
+--- 
+- hosts: VMLIST 
+  become: yes
+  become_user: root
+  serial: 1
+  tasks:
+    - shell: apt autoremove -y
+      register: shell_result
+    - debug:
+        var: shell_result.stdout_lines

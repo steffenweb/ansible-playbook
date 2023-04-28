@@ -1,0 +1,11 @@
+--- 
+- hosts: VMLIST
+  become: yes
+  become_user: root
+  serial: 1 
+  tasks: 
+    - shell: apt list --upgradable
+      register: shell_result 
+
+    - debug:
+        var: shell_result.stdout_lines
